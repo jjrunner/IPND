@@ -7,13 +7,13 @@ answers = {'medium':{'___1___': 'function', '___2___': 'arguments', '___3___': "
 ###_____________
 
 
-def get_vals(level):
+def get_vals(selected_level):
     '''
     This function will take in the level from the user (easy, medium, or hard) and then use the correct number of values that will need to be filled.
     INPUT: level as a string ('easy', 'medium', 'hard')
     OUTPUT: vals as a list with either 5 inputs or four depending on level
     '''
-    if level == 'hard' or level == 'easy':
+    if selected_level == 'hard' or selected_level == 'easy':
         vals = ['___1___','___2___','___3___','___4___','___5___']
     else:
         vals = ['___1___','___2___','___3___','___4___']
@@ -37,25 +37,22 @@ def replace_text(text_input, val, answer):
     return replaced
 
 
-def answer_stuff(level):
+def answer_stuff(selected_level):
     '''
     The meat of our game - takes the level of the game and runs the game either forever or until the user gets all the answers correct.
     INPUT: Takes the input as either easy, medium or hard as string
     OUTPUT: None
     '''
-    openings = get_vals(level)
+    openings = get_vals(selected_level)
+    new_text = levels[selected_level]
     for idx, val in enumerate(openings):
         answer = input("What do you think should be in the " + val + " blank?\n\n")
-        while answer.lower() != answers[level][val]:
+        while answer.lower() != answers[selected_level][val]:
             print("Oops! That wasn't quite what we were looking for... try again.\n")
             answer = input("What do you think should be in the " + val + " blank?\n\n")
 
         print("Nice! You got it!\n")
-
-        if idx == 0:
-            new_text = replace_text(levels[level], val, answer)
-        else:
-            new_text = replace_text(new_text, val, answer)
+        new_text = replace_text(new_text, val, answer)
 
         print("The remaining values are shown in the text below.\n\n" + new_text)
 
@@ -68,11 +65,11 @@ def intro():
     This function will prompt the user to ask appropriate question(s)
     '''
 
-    level = input('Please enter the level you would like to play - enter exactly as shown in quotes - ("easy", "medium", "hard"):  ')
+    selected_level = input('Please enter the level you would like to play - enter exactly as shown in quotes - ("easy", "medium", "hard"):  ')
 
     directions = '\n \n \n You will have unlimited attempts, and the goal of the game is to fill in all of values in the blanks of the following string:\n \n'
-    print(directions + levels[level])
-    return level
+    print(directions + levels[selected_level])
+    return selected_level
 
 
 
@@ -80,8 +77,8 @@ def main():
     '''
     This function will control the running of the entire program
     '''
-    level = intro()
-    answer_stuff(level)
+    selected_level = intro()
+    answer_stuff(selected_level)
 
 
 if __name__ == '__main__':
