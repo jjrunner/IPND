@@ -1,3 +1,8 @@
 ### Project 4 Udacity Movie Trailer Website
 
-In order to launch the Movie Trailer Website, you will want to run the code `python entertainment_center.py`.  
+#### How to run the code
+
+1. Clone this repository.
+2. cd into the created repository.
+3. Run `python entertainment_center.py`.
+4. Enjoy the trailers of the movies!
