@@ -1,25 +1,26 @@
 import fresh_tomatoes
 from media import Movie
 
-
+# Toy story movie: movie title, storyline, poster image, and trailer
 toy_story = Movie("Toy Story", 
                   "A story of a boy and his toys that come to life", 
                   "http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg", 
                   "https://youtu.be/KYz2wyBy3kc")
 
+# Avatar movie: movie title, storyline, poster image, and trailer
 avatar = Movie("Avatar", 
                "A marine on an alien planet", 
                "http://upload.wikimedia.org/wikipedia/id/b/b0/Avatar-Teaser-Poster.jpg", 
                "https://youtu.be/5PSNL1qE6VY")
 
+# Sandlot movie: movie title, storyline, poster image, and trailer
 sandlot = Movie("The Sandlot", 
                 "When Scottie Smalls (Thomas Guiry) moves to a new neighborhood, " +
                 "he manages to make friends with a group of kids who play baseball at the sandlot.", 
                 "https://upload.wikimedia.org/wikipedia/en/d/d4/Sandlot_poster.jpg", 
                 "https://youtu.be/ec9W8JbFykw")
 
-#sandlot.web_trailer()
-
+# School of Rock movie: movie title, storyline, poster image, and trailer
 sor = Movie("School of Rock", 
             "Overly enthusiastic guitarist Dewey Finn (Jack Black) gets thrown out of his " +
             "bar band and finds himself in desperate need of work. Posing as a substitute " +
@@ -28,6 +29,7 @@ sor = Movie("School of Rock",
             "https://upload.wikimedia.org/wikipedia/en/1/11/School_of_Rock_Poster.jpg", 
             "https://youtu.be/XCwy6lW5Ixc")
 
+# Hunger Games movie: movie title, storyline, poster image, and trailer
 hunger = Movie("The Hunger Games", 
                "When Scottie Smalls (Thomas Guiry) moves to a new neighborhood, " +
                "he manages to make friends with a group of kids who play baseball " +
@@ -35,6 +37,7 @@ hunger = Movie("The Hunger Games",
                "https://upload.wikimedia.org/wikipedia/en/3/39/The_Hunger_Games_cover.jpg", 
                "https://youtu.be/FovFG3N_RSU")
 
+# Inception movie: movie title, storyline, poster image, and trailer
 inc = Movie("Inception", 
             "Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter " +
             "people's dreams and steal their secrets from their subconscious. His " +
